@@ -1,10 +1,52 @@
 [gd_scene format=3 uid="uid://d1p7pq76xiy1m"]
 
-[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_7dm0k"]
+[ext_resource type="Texture2D" uid="uid://c6fsekmlbqg8l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_2-5_tracks.png" id="1_ig7tw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_texture = ExtResource("1_ig7tw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h2yge"]
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1bvp3"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="Main" type="Node3D" unique_id=1268391159]
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1245649837]
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=268149713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1058821187]
-shape = SubResource("HeightMapShape3D_7dm0k")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=2093229593]
+mesh = SubResource("PlaneMesh_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=950718614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.020691156)
+shape = SubResource("ConcavePolygonShape3D_1bvp3")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1980734152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1219439823]
+mesh = SubResource("PlaneMesh_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=500952467]
+shape = SubResource("ConcavePolygonShape3D_1bvp3")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=391145612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1197409392]
+mesh = SubResource("PlaneMesh_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=2103266151]
+shape = SubResource("ConcavePolygonShape3D_1bvp3")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1764510336]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GridMap" unique_id=1368173495]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap/StaticBody3D" unique_id=300093214]
+mesh = SubResource("PlaneMesh_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/StaticBody3D" unique_id=493432627]
+shape = SubResource("ConcavePolygonShape3D_1bvp3")
