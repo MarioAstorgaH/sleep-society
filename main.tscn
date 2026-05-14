@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d1p7pq76xiy1m"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_7dm0k"]
+
+[node name="Main" type="Node3D" unique_id=1268391159]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1245649837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1058821187]
+shape = SubResource("HeightMapShape3D_7dm0k")
