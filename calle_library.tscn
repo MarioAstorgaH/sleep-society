@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d2kishuabmvuw"]
+
+[node name="CalleLibrary" type="Node3D" unique_id=1554501485]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=998808146]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=417343274]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2118534301]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1329633111]

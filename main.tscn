@@ -11,6 +11,14 @@ material = SubResource("StandardMaterial3D_0xm2m")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1bvp3"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
+[sub_resource type="MeshLibrary" id="MeshLibrary_ig7tw"]
+item/0/name = ""
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+
 [node name="Main" type="Node3D" unique_id=1268391159]
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=268149713]
@@ -42,6 +50,7 @@ mesh = SubResource("PlaneMesh_h2yge")
 shape = SubResource("ConcavePolygonShape3D_1bvp3")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1764510336]
+mesh_library = SubResource("MeshLibrary_ig7tw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap" unique_id=1368173495]
 
