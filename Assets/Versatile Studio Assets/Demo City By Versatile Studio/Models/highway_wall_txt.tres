@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cs1bxvb2y1gty"]
+
+[ext_resource type="Texture2D" uid="uid://ba65muklyqbsh" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/highway_wall.png" id="1_687aj"]
+
+[resource]
+resource_name = "highway_wall_txt"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_687aj")
+emission_enabled = true

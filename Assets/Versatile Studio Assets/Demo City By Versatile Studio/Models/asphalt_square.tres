@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7dwcoxyiin53"]
+
+[ext_resource type="Texture2D" uid="uid://866r6rntbthc" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_square.png" id="1_ku34i"]
+
+[resource]
+resource_name = "asphalt_square"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ku34i")
+emission_enabled = true

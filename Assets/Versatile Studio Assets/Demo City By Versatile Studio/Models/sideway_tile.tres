@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bj2iye4vrvjc6"]
+
+[ext_resource type="Texture2D" uid="uid://cb3hhwiqs4e3l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/sideway_tile.png" id="1_agk53"]
+
+[resource]
+resource_name = "sideway_tile"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_agk53")
+emission_enabled = true

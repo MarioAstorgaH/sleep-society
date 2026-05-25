@@ -1,61 +1,18 @@
 [gd_scene format=3 uid="uid://d1p7pq76xiy1m"]
 
-[ext_resource type="Texture2D" uid="uid://c6fsekmlbqg8l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_2-5_tracks.png" id="1_ig7tw"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
-albedo_texture = ExtResource("1_ig7tw")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_h2yge"]
-material = SubResource("StandardMaterial3D_0xm2m")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1bvp3"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
-
-[sub_resource type="MeshLibrary" id="MeshLibrary_ig7tw"]
-item/0/name = ""
-item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-item/0/mesh_cast_shadow = 1
-item/0/shapes = []
-item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-item/0/navigation_layers = 1
+[ext_resource type="MeshLibrary" uid="uid://cjg653bx622w7" path="res://RoadsLibrary.tres" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://763egier5gew" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Models/mid_house_1.fbx" id="2_0xm2m"]
 
 [node name="Main" type="Node3D" unique_id=1268391159]
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=268149713]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+[node name="eee" type="GridMap" parent="." unique_id=1764510336]
+mesh_library = ExtResource("1_ig7tw")
+data = {
+"cells": PackedInt32Array(0, 0, 1441792, 1, 0, 1441792, 2, 0, 1441792, 3, 0, 1441792, 4, 0, 1441792, 2, 65535, 1048583, 65535, 0, 1048576, 65534, 0, 1048576, 65533, 0, 1048576, 65531, 0, 1048576, 65532, 0, 1048576, 5, 0, 1048576, 5, 1, 1048583, 3, 1, 1048583, 4, 1, 1048583, 5, 65535, 1048583, 4, 65535, 1048583, 3, 65535, 1048583, 1, 65535, 1048583, 0, 65535, 1048583, 65535, 65535, 1048583, 65534, 65535, 1048583, 65533, 65535, 1048583, 65532, 65535, 1048583, 65531, 65535, 1048583, 65530, 65535, 1048583, 65531, 1, 1048583, 65532, 1, 1048583, 65533, 1, 1048583, 65534, 1, 1048583, 65535, 1, 1048583, 0, 1, 1048583, 1, 1, 1048583, 2, 1, 1048583, 65531, 2, 7, 65531, 3, 7, 65531, 4, 7, 65531, 5, 7, 65531, 6, 7, 65531, 7, 7, 65531, 8, 1441799, 65531, 9, 1441799, 65531, 10, 7, 65532, 10, 1441799, 65533, 10, 1441799, 65534, 10, 1441799, 6, 10, 1441799, 65535, 10, 1441799, 0, 10, 1441799, 1, 10, 1441799, 2, 10, 1441799, 3, 10, 1441799, 4, 10, 1441799, 5, 10, 1441799, 7, 10, 1441799, 7, 9, 1441799, 7, 8, 1441799, 7, 7, 1441799, 7, 6, 1441799, 7, 5, 1441799, 7, 4, 1441799, 7, 3, 1441799, 7, 2, 1441799, 7, 1, 1441799, 6, 1, 1441799, 6, 9, 1441799, 5, 9, 1441799, 4, 9, 1441799, 3, 9, 1441799, 2, 9, 1441799, 1, 9, 1441799, 0, 9, 1441799, 65535, 9, 1441799, 65534, 9, 1441799, 65533, 9, 1441799, 65532, 9, 1441799, 65532, 8, 1441799, 65533, 8, 1441799, 65534, 8, 1441799, 65535, 8, 1441799, 0, 8, 1441799, 1, 8, 1441799, 2, 8, 1441799, 3, 8, 1441799, 6, 8, 1441799, 5, 8, 1441799, 4, 8, 1441799, 5, 7, 1441799, 6, 7, 1441799, 4, 7, 1441799, 3, 6, 1441799, 2, 6, 1441799, 1, 6, 1441799, 0, 6, 1441799, 65535, 6, 1441799, 65534, 7, 1441799, 65533, 7, 1441799, 65532, 7, 1441799, 65535, 7, 1441799, 0, 7, 1441799, 1, 7, 1441799, 2, 7, 1441799, 3, 7, 1441799, 4, 6, 1441799, 5, 6, 1441799, 6, 6, 1441799, 6, 5, 1441799, 6, 4, 1441799, 6, 3, 1441799, 6, 2, 1441799, 5, 2, 1441799, 4, 2, 1441799, 3, 2, 1441799, 2, 2, 1441799, 1, 2, 1441799, 0, 2, 1441799, 65535, 2, 1441799, 65534, 2, 1441799, 65533, 2, 1441799, 65532, 2, 1441799, 65532, 3, 1441799, 65533, 3, 1441799, 65534, 3, 1441799, 65535, 3, 1441799, 0, 3, 1441799, 1, 3, 1441799, 2, 3, 1441799, 3, 3, 1441799, 4, 3, 1441799, 5, 3, 1441799, 5, 4, 1441799, 4, 4, 1441799, 3, 4, 1441799, 2, 4, 1441799, 1, 4, 1441799, 0, 4, 1441799, 65535, 4, 1441799, 65534, 4, 1441799, 65533, 4, 1441799, 65532, 4, 1441799, 65532, 5, 1441799, 65533, 5, 1441799, 65534, 5, 1441799, 65535, 5, 1441799, 0, 5, 1441799, 1, 5, 1441799, 2, 5, 1441799, 3, 5, 1441799, 4, 5, 1441799, 5, 5, 1441799, 65534, 6, 1441799, 65533, 6, 1441799, 65532, 6, 1441799)
+}
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=2093229593]
-mesh = SubResource("PlaneMesh_h2yge")
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1775106343]
+transform = Transform3D(0.6760919, -1.00745545e-08, -0.7368173, 0.12533727, 0.9854257, 0.11500749, 0.7260787, -0.1701063, 0.66623837, 0, 2.686026, 3.0917535)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=950718614]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.020691156)
-shape = SubResource("ConcavePolygonShape3D_1bvp3")
-
-[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1980734152]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1219439823]
-mesh = SubResource("PlaneMesh_h2yge")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=500952467]
-shape = SubResource("ConcavePolygonShape3D_1bvp3")
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=391145612]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1197409392]
-mesh = SubResource("PlaneMesh_h2yge")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=2103266151]
-shape = SubResource("ConcavePolygonShape3D_1bvp3")
-
-[node name="GridMap" type="GridMap" parent="." unique_id=1764510336]
-mesh_library = SubResource("MeshLibrary_ig7tw")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="GridMap" unique_id=1368173495]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap/StaticBody3D" unique_id=300093214]
-mesh = SubResource("PlaneMesh_h2yge")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/StaticBody3D" unique_id=493432627]
-shape = SubResource("ConcavePolygonShape3D_1bvp3")
+[node name="mid_house_1" parent="." unique_id=2051084456 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.5075085, 0, 0, 0, 0.5075085, 0, 0, 0, 0.5075085, 2.0535264, 2, 7.695595)

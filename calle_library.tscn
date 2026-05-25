@@ -1,11 +1,138 @@
 [gd_scene format=3 uid="uid://d2kishuabmvuw"]
 
+[ext_resource type="Texture2D" uid="uid://c6fsekmlbqg8l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_2-5_tracks.png" id="1_b1ff1"]
+[ext_resource type="Texture2D" uid="uid://bcvtmusfo2g18" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_2_tracks.png" id="2_02lv1"]
+[ext_resource type="Texture2D" uid="uid://rcmlcrmgh7nj" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_4_tracks.png" id="3_j1w2i"]
+[ext_resource type="Texture2D" uid="uid://c3uy5lscpdpq6" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_extra.png" id="4_7ifc6"]
+[ext_resource type="Texture2D" uid="uid://d4jb8b0wpgs8a" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_highway.png" id="5_j1w2i"]
+[ext_resource type="Texture2D" uid="uid://cb3hhwiqs4e3l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/sideway_tile.png" id="5_o0hq3"]
+[ext_resource type="Texture2D" uid="uid://866r6rntbthc" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_square.png" id="6_7ifc6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s5j4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4as6r"]
+albedo_texture = ExtResource("1_b1ff1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_636ot"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_02nnn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37h70"]
+albedo_texture = ExtResource("2_02lv1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lvx2q"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rd2xy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhwsv"]
+albedo_texture = ExtResource("3_j1w2i")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_26yxr"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uchua"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1npqt"]
+albedo_texture = ExtResource("4_7ifc6")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yix2l"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o0hq3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5j4a"]
+albedo_texture = ExtResource("5_j1w2i")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4as6r"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_636ot"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02nnn"]
+albedo_texture = ExtResource("6_7ifc6")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_37h70"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lvx2q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rd2xy"]
+albedo_texture = ExtResource("5_o0hq3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xhwsv"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
 [node name="CalleLibrary" type="Node3D" unique_id=1554501485]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=998808146]
+[node name="SingleRoad" type="MeshInstance3D" parent="." unique_id=998808146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6057587, 0, 1.4034561)
+visible = false
+mesh = SubResource("PlaneMesh_s5j4a")
+surface_material_override/0 = SubResource("StandardMaterial3D_4as6r")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=417343274]
+[node name="StaticBody3D" type="StaticBody3D" parent="SingleRoad" unique_id=145665301]
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2118534301]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SingleRoad/StaticBody3D" unique_id=1529197790]
+shape = SubResource("ConcavePolygonShape3D_636ot")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1329633111]
+[node name="DoubleRoadLine" type="MeshInstance3D" parent="." unique_id=417343274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.121456504)
+visible = false
+mesh = SubResource("PlaneMesh_02nnn")
+surface_material_override/0 = SubResource("StandardMaterial3D_37h70")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DoubleRoadLine" unique_id=2145500955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoubleRoadLine/StaticBody3D" unique_id=1693648453]
+shape = SubResource("ConcavePolygonShape3D_lvx2q")
+
+[node name="DoubleRoadExterior" type="MeshInstance3D" parent="." unique_id=2118534301]
+visible = false
+mesh = SubResource("PlaneMesh_rd2xy")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhwsv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DoubleRoadExterior" unique_id=1748664492]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoubleRoadExterior/StaticBody3D" unique_id=1325165475]
+shape = SubResource("ConcavePolygonShape3D_26yxr")
+
+[node name="WalkRoad" type="MeshInstance3D" parent="." unique_id=1329633111]
+visible = false
+mesh = SubResource("PlaneMesh_uchua")
+surface_material_override/0 = SubResource("StandardMaterial3D_1npqt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WalkRoad" unique_id=1625131258]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WalkRoad/StaticBody3D" unique_id=1760599911]
+shape = SubResource("ConcavePolygonShape3D_yix2l")
+
+[node name="HighwayRoad" type="MeshInstance3D" parent="." unique_id=172077815]
+visible = false
+mesh = SubResource("PlaneMesh_o0hq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_s5j4a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HighwayRoad" unique_id=46882114]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HighwayRoad/StaticBody3D" unique_id=421288624]
+shape = SubResource("ConcavePolygonShape3D_4as6r")
+
+[node name="AsphaltSquareRoad" type="MeshInstance3D" parent="." unique_id=595583795]
+visible = false
+mesh = SubResource("PlaneMesh_636ot")
+surface_material_override/0 = SubResource("StandardMaterial3D_02nnn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="AsphaltSquareRoad" unique_id=1636180692]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AsphaltSquareRoad/StaticBody3D" unique_id=683274186]
+shape = SubResource("ConcavePolygonShape3D_37h70")
+
+[node name="Banqueta" type="MeshInstance3D" parent="." unique_id=583800706]
+mesh = SubResource("PlaneMesh_lvx2q")
+surface_material_override/0 = SubResource("StandardMaterial3D_rd2xy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Banqueta" unique_id=386325464]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Banqueta/StaticBody3D" unique_id=1349335068]
+shape = SubResource("ConcavePolygonShape3D_xhwsv")

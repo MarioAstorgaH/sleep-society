@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bb3bh8emiluli"]
+
+[ext_resource type="Texture2D" uid="uid://c6fsekmlbqg8l" path="res://Assets/Versatile Studio Assets/Demo City By Versatile Studio/Textures/asphalt_2-5_tracks.png" id="1_38cfk"]
+
+[resource]
+resource_name = "asphalt_2-5_tracks"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_38cfk")
+emission_enabled = true
