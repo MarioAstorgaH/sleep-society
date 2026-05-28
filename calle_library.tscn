@@ -129,6 +129,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_02nnn")
 shape = SubResource("ConcavePolygonShape3D_37h70")
 
 [node name="Banqueta" type="MeshInstance3D" parent="." unique_id=583800706]
+visible = false
 mesh = SubResource("PlaneMesh_lvx2q")
 surface_material_override/0 = SubResource("StandardMaterial3D_rd2xy")
 
