@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "godot": {
+      "type": "local",
+      "command": [
+        "node",
+        "godot-mcp-enhanced-b7d56f0ad1408a3f3a6e6586a258a156b77687ab/build/index.js"
+      ],
+      "enabled": true,
+      "env": {
+        "DEBUG": "true",
+        "GODOT_PATH": "/usr/lib/godot/Godot_v4.6.3-stable_linux.x86_64"
+      }
+    }
+  }
+}
